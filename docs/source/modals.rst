@@ -1,3 +1,6 @@
+Modals
+===---
+
 Modal dialogs use `a11y-dialog`_. 
 
 Example HTML, you'd create one of these blocks for every modal.
