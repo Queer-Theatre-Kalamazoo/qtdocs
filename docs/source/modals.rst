@@ -1,5 +1,5 @@
 Modals
-===---
+======
 
 Modal dialogs use `a11y-dialog`_. 
 
