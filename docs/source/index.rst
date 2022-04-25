@@ -1,17 +1,14 @@
-Welcome to Lumache's documentation!
+Welcome to QTDocs!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**QTDocs** (Queer Theatre Documentation) document the use and modification of the applications and software written for and used by `Queer Theatre Kalamazoo`_.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development.
+   This documentation and the project to which they refer are under active development. Contributions are welcome; I don't know what I'm doing!
 
 Contents
 --------
@@ -19,3 +16,5 @@ Contents
 .. toctree::
 
    modals
+
+.. _Queer Theatre Kalamazoo: https://queertk.org
