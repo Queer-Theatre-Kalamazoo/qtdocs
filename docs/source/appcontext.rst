@@ -18,20 +18,15 @@ Solution
   def init_app():
   	app = Flask(__name__)
     
-    # Create objects before initializing them
-    mail = Mail()
+    # Config block
     
-    # Give all the things to app
-    with app.app_context():
+    mail = Mail() # Create objects before initializing them
     
-    	# Initialize all the things
-    	mail.init_app(app)
-      .....
-        
-      # Make all the things accessible from current_app.thing
-      app.mail = mail
-      .....
-
+    with app.app_context(): # Give all the things to app
+    
+    	mail.init_app(app) # Initialize all the things
+      app.mail = mail # Make all the things accessible from current_app.thing
+      
       return app
         
 ``otherfile.py``
