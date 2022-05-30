@@ -1,6 +1,7 @@
-App Context and Initialization
+Application Context
 ======
 .. _appcontext:
+
 
 .. epigraph:: Here I will demonstrate one solution to a problem I frequently encountered: circular imports. For this example we will be using Flask-Mail, but the process should remain the same for any extension that needs an object to be initialized to the application context.
 
