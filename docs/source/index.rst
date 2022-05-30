@@ -16,6 +16,7 @@ Contents
 .. toctree::
 
    modals
-   app-context-initialization 
+   
+   appcontext
 
 .. _Queer Theatre Kalamazoo: https://queertk.org
