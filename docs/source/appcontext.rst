@@ -5,13 +5,14 @@ Application Context
 
 .. epigraph:: Here I will demonstrate one solution to a problem I frequently encountered: circular imports. For this example we will be using Flask-Mail, but the process should remain the same for any extension that needs an object to be initialized to the application context.
 
-.. tip:: The following assumes a typical application factory pattern is being used. See https://hackersandslackers.com/flask-application-factory/\.
+.. note:: The following assumes a typical application factory pattern is being used. See https://hackersandslackers.com/flask-application-factory/\.
 
 ***************
 Solution
 ***************
 
 ``__init__.py``
+
 .. code-block:: python
 
   def init_app():
@@ -25,9 +26,23 @@ Solution
     
     	# Initialize all the things
     	mail.init_app(app)
-        .....
+      .....
         
-        # Make all the things accessible from current_app.thing
-        app.mail = mail
+      # Make all the things accessible from current_app.thing
+      app.mail = mail
+      .....
+
+      return app
         
-        return app
+``otherfile.py``
+
+.. code-block:: python
+
+    from flask import current_app
+    from flask_mail import Message
+    
+    message = Message('Subject', 'Recipients')
+    message.body = 'Body'
+    message.html = 'HTML Body'
+    
+    current_app.mail.send(message)
