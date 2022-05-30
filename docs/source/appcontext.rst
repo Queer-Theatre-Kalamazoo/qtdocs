@@ -16,17 +16,15 @@ Solution
 .. code-block:: python
 
   def init_app():
-  	app = Flask(__name__)
-    
-    # Config block
-    
+    app = Flask(__name__)
+
     mail = Mail() # Create objects before initializing them
-    
+
     with app.app_context(): # Give all the things to app
-    
-    	mail.init_app(app) # Initialize all the things
+
+      mail.init_app(app) # Initialize all the things
       app.mail = mail # Make all the things accessible from current_app.thing
-      
+
       return app
         
 ``otherfile.py``
